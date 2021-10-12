@@ -1,0 +1,19 @@
+.quote{
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+.quote h3{
+    display: flex;
+    padding: 10px;
+    justify-content:space-between;
+}
+.quote p{
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+}
+h3 fa-icon{
+    color: red;
+}

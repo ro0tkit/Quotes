@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  margin: 30px auto;
+  max-width: 800px;
+  margin: 5rem auto;
   overflow: auto;
   min-height: 300px;
   border: 5px solid rgb(0, 88, 122);
@@ -77,9 +77,4 @@ body {
 .form-control-check input {
   flex: 2;
   height: 20px;
-}
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    
 }

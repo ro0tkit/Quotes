@@ -1,0 +1,18 @@
+<form class="add-form" (ngSubmit)="onSubmit">
+    
+    <div class="form-control">
+        <label for="text">Quote</label>
+        <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Add Quote">
+    </div>
+
+    <div class="form-control">
+        <label for="text">Author</label>
+        <input type="text" name="author" [(ngModel)]="author" id="author" placeholder="Add Author">
+    </div>
+
+    <div class="form-control">
+        <label for="text">Your Name</label>
+        <input type="text" name="text" id="name" [(ngModel)]="name"placeholder="Enter Your Name">
+        <input type="submit" value="Save Quote" class="btn btn-block">
+    </div>
+</form>
