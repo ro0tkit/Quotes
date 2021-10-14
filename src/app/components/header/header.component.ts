@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SharedServiceService } from "../../shared-service.service";
+import { Subscription } from "rxjs";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title: string = 'DAILY QUOTES';
   showAddQuote: boolean = true;
-  constructor() { }
+  subscription: Subscription;
+
+  constructor(private sharedService: SharedServiceService) { 
+    this.subscription = this.sharedService
+    .onToggle()
+    .subscribe((value) => (this.showAddQuote = value));
+  }
 
   ngOnInit(): void {
   }
-  toggleForm(){
-   this.showAddQuote = !this.showAddQuote;
+  toggleAddQuote(){
+   this.sharedService.toggleAddQuote();
   }
 }

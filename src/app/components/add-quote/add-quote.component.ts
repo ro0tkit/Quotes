@@ -1,5 +1,7 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { Quote } from '../../quote';
+import { SharedServiceService } from "../../shared-service.service";
+import { Subscription } from "rxjs";
 @Component({
   selector: 'app-add-quote',
   templateUrl: './add-quote.component.html',
@@ -12,8 +14,14 @@ export class AddQuoteComponent implements OnInit {
 statement: string;
 author: string; 
 name: string;
-showAddQuote: boolean = true;
-  constructor() { }
+showAddQuote: boolean = false;
+subscription: Subscription;
+
+  constructor(private sharedService: SharedServiceService) { 
+    this.subscription = this.sharedService
+    .onToggle()
+    .subscribe((value) => (this.showAddQuote = value));
+  }
 
   ngOnInit(): void {
   }
