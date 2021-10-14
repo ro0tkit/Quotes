@@ -8,7 +8,7 @@ import { Subscription } from "rxjs";
 })
 export class HeaderComponent implements OnInit {
   title: string = 'DAILY QUOTES';
-  showAddQuote: boolean = true;
+  showAddQuote: boolean = false;
   subscription: Subscription;
 
   constructor(private sharedService: SharedServiceService) { 
