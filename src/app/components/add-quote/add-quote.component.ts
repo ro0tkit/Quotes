@@ -5,25 +5,29 @@ import { Quote } from '../../quote';
   templateUrl: './add-quote.component.html',
   styleUrls: ['./add-quote.component.css']
 })
-export class AddQuoteComponent implements OnInit {
-@Output() onAddQuote= new EventEmitter()
+export class AddQuoteComponent implements OnInit { 
+@Output() onAddQuote: EventEmitter<Quote> = new EventEmitter()
 
-text: string;
-author: string;
+
+statement: string;
+author: string; 
 name: string;
-
+showAddQuote: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleForm(){
+    this.showAddQuote = !this.showAddQuote;
+   }
 onSubmit(){
-  if(!this.text){
-    alert('Please add a quote')
+  if(!this.statement){
+    alert('Please add a quote!')
     return;
   }
+  
   const newQuote = {
-  text: this.text,
+  statement: this.statement,
   author: this.author,
   name: this.name,
   };
@@ -31,7 +35,7 @@ onSubmit(){
   
 this.onAddQuote.emit(newQuote);
 
-  this.text = "";
+  this.statement = "";
   this.author = "";
   this.name = "";
 }

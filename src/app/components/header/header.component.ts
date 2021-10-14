@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'DAILY QUOTES';
-
+  showAddQuote: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleForm(){
+   this.showAddQuote = !this.showAddQuote;
+  }
 }

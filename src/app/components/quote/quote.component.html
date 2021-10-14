@@ -1,8 +1,8 @@
 <app-add-quote (onAddQuote)= "addQuote($event)"></app-add-quote>
     <app-quote-item 
-    *ngFor='let quote of quotes'
+    *ngFor='let quote of quotes; let i = index'
      [quote]="quote"
-     (onDeleteQuote)= "deleteQuote(quote)">
+     (onDeleteQuote)= "deleteQuote($event, i)">
     </app-quote-item> 
     
 

@@ -17,3 +17,12 @@
 h3 fa-icon{
     color: red;
 }
+.vote{
+    display: flex;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+.vote fa-icon{
+    color: blue;
+}
+
