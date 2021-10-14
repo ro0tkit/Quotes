@@ -28,11 +28,11 @@ subscription: Subscription;
   toggleForm(){
     this.showAddQuote = !this.showAddQuote;
    }
-onSubmit(){
-  if(!this.statement){
-    alert('Please add a quote!')
-    return;
-  }
+   onSubmit(){
+    if(!this.statement){
+      alert('Please Add a Quote!')
+      return;
+    }
   
   const newQuote = {
   statement: this.statement,
