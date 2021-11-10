@@ -9,7 +9,9 @@ import { QuoteComponent } from './components/quote/quote.component';
 import { QuoteItemComponent } from './components/quote-item/quote-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { CustomStyleDirectiveDirective } from './custom-style-directive.directive';
+import { DateCountPipe } from './date-count.pipe'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms'
     ButtonComponent,
     QuoteComponent,
     QuoteItemComponent,
-    AddQuoteComponent
+    AddQuoteComponent,
+    CustomStyleDirectiveDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

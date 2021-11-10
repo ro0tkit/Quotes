@@ -2,6 +2,7 @@
 <h3>{{quote.statement}} <fa-icon (click)="(onDelete(true))" [icon]="faTrashAlt"></fa-icon></h3>
 <p>{{quote.author}}</p>
 <h6>{{quote.name}}</h6>
+<span id="datecolor">{{quote.date|dateCount|date:'short'}}</span>
 </div>
 
 <div class="vote">

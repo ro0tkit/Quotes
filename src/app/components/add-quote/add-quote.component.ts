@@ -14,6 +14,7 @@ export class AddQuoteComponent implements OnInit {
 statement: string;
 author: string; 
 name: string;
+date:string;
 showAddQuote: boolean = false;
 subscription: Subscription;
 
@@ -38,6 +39,7 @@ subscription: Subscription;
   statement: this.statement,
   author: this.author,
   name: this.name,
+  date: this.date,
   };
 
   

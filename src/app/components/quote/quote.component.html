@@ -2,7 +2,8 @@
     <app-quote-item 
     *ngFor='let quote of quotes; let i = index'
      [quote]="quote"
-     (onDeleteQuote)= "deleteQuote($event, i)">
+     (onDeleteQuote)= "deleteQuote($event, i)"
+     appCustomStyleDirective>
     </app-quote-item> 
     
 
